@@ -12,7 +12,7 @@ const Home = () => {
             <Navbar></Navbar>
 
             <div className="grid md:grid-cols-4 grid-cols-1 gap-6 ">
-                <div className="text-center border">
+                <div className="border">
                     <LeftNav></LeftNav>
                 </div>
                 <div className="md:col-span-2 text-center border">
