@@ -10,6 +10,7 @@ import Home from './Pages/Home/Home';
 import LogIn from './Pages/LogIn/LogIn';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
+import NewsDetails from './Pages/Home/NewsDetails';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=> fetch('news.json')
       },
       {
         path: '/login',
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/news/:id',
+        element: <NewsDetails></NewsDetails>
       }
     ]
   },
