@@ -11,6 +11,7 @@ import LogIn from './Pages/LogIn/LogIn';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import NewsDetails from './Pages/Home/NewsDetails';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/news/:id',
-        element: <NewsDetails></NewsDetails>
+        element: <PrivateRoute><NewsDetails></NewsDetails></PrivateRoute>
       }
     ]
   },
